@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>添加事件，解除事件</title>
+		<script>
+			window.onload=function()
+			{
+				var obtn=document.getElementById("btn");
+				var otxt=document.getElementById("txt");
+				otxt.onclick=function(){
+					this.style.color="hotpink";
+				}
+				
+				obtn.addEventListener("click",function(){
+					otxt.onclick=null;
+				},false);
+			}
+		</script>
+	</head>
+	<body>
+		<div style="text-transform: capitalize;" id="txt">come back for you</div>
+		<input type="button" value="解除" id="btn" />
+	</body>
+</html>

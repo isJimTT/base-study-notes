@@ -1,0 +1,16 @@
+{
+  "id": "3661609",
+  "name": "撒大大",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8288872",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e853",
+      "unicode_decimal": 59475
+    }
+  ]
+}

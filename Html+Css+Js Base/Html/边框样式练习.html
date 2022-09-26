@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>边框</title>
+<style>
+div {/*设置div元素的公共样式*/
+	font-size: 16px;
+	margin: 10px;
+	border: 1px solid black;
+}
+#box1 {
+	  /*1个参数值，同时设置四个方向的边框为实线*/
+	  /*1个值，同时设置四个方向的边框宽度为1px*/
+/*1个值，同时设置四个方向的边框颜色为红色*/
+	border: 1px solid red;
+}
+#box2 {  /*2个参数值，设置上、下边框为实线，左、右边框为虚线*/
+	border-top: 2px solid green;
+	border-bottom: 2px solid green;
+	border-left: 2px dashed blue;
+	border-right: 2px dashed blue;
+	 }
+#box3 {  /*3个参数值，设置上边框为实线，左、右边框为虚线，下边框为点线*/
+	border-top: 3px solid aqua;
+	border-left: 3px dashed yellow;
+	border-right: 3px dashed yellow;
+	border-bottom: 3px dotted pink;
+ }
+/*按顺时针方向依次设置上、右、下、左方向的边框分别为实线、虚线、点线和双实线*/
+#box4 { 
+	border-style: solid dashed dotted double;
+	}
+#box5 {  /*使用对应方向的边框风格属性设置各个边框的风格*/
+ /*上边框为实线*/
+	 /*右边框为虚线*/
+	 /*下边框为点线*/
+	 /*左边框为双实线*/
+ /*上边框宽度为1px*/
+	/*右边框宽度为3px*/
+	  /*下边框宽度为6px*/
+  /*左边框宽度为9px*/
+     /*上边框颜色为红色*/
+	  /*右边框颜色为蓝色*/
+	  /*下边框颜色为绿色*/
+	 /*左边框颜色为粉红色*/
+	border-top: 1px solid red;
+	border-right:3px dashed blue;
+	border-bottom:6px dotted green;
+	border-left:9px double pink;
+}
+</style>
+</head>
+<body>
+  <div id="box1">边框风格设置示例(border-style,1个参数值)</div>
+  <div id="box2">边框风格设置示例(border-style,2个参数值)</div>
+  <div id="box3">边框风格设置示例(border-style,3个参数值)</div>
+  <div id="box4">边框风格设置示例(border-style,4个参数值)</div>
+  <div id="box5">边框风格设置示例(border-方向-style属性)</div>
+</body>
+</html>

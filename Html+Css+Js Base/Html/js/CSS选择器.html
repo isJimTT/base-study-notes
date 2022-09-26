@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS选择器</title>
+		<link href="CSS选择器.css" rel="stylesheet" type="text/css" />
+	</head>
+	<style type="text/css">
+		span{
+			color:red
+		}
+		.div1{
+			color: blue;
+		}
+		.div2{
+			color:green;
+		}
+		span[class="div3"]{
+			font-size: 20px;
+		}
+		div>span{
+			color: pink;
+			font-family: "幼圆";
+		}
+		.div5{
+			text-decoration: none;	
+		}
+		.div5:hover{
+			text-decoration: underline;
+		}
+		.div5:{
+			color:gainsboro;
+		}
+		.div7{
+			font-style: italic;
+		}
+	</style>
+	<body>
+		<span>1.使用标记选择器将此段文字设置为红色</span>
+		<div class="div1">2.使用类选择器将此段文字设置为蓝色。</div>
+		<div class="div2">3.使用ID选择器将此段文字设置为绿色。</div>
+		<span class="div3">4.用属性选择器将此段文字字体大小20px,并回答我的颜色为什么是红色？答：</span>
+		<div >
+			<span>5.是用派生选择器设置此段文字字体为幼圆，颜色为粉色。</span>
+		</div>
+		<a href="#" class="div5">  我是超链接，我没下划线。鼠标悬停出现下划线，超链接访问后为灰色。</a>
+		<div class="div6" style="font-weight: bold;">用行内样式（内联，即样式写在标签内）设置此文字加粗.属性为：font-weight.</div>
+		<div class="div7">用内部样式（即样式写在head之间）设置此文字加粗.属性为：font-style.</div>
+		<div class="div8">用外部样式（即样式写在单独的css文件里，然后在此网页中的head之间使用link链接,或者在sytele中使用@import url）设置此文字加粗，倾斜，灰色。</div>
+		
+
+</div>
+	</body>
+</html>

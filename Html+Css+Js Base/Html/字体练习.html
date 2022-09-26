@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>字体</title>
+<style>
+#box {
+	   
+		font-size: 16px; /*设置父元素的字体大小*/
+		font-weight: bold; /*使用英文关键字加粗字体*/
+	}
+#box1 { 
+	font-size: 30px;
+	/*设置中、英文使用不同的字体*/
+	font-family: tahoma,"隶书",serif;
+	font-size: 16px;
+}
+
+#box2 {
+	
+	font-family: tahoma,serif;
+}
+#box3{ /*中、英文使用默认字体*/
+	font-family: serif;
+	font-size: 80%;
+}
+</style>
+</head>
+<body>
+  <div id="box">   <!-- 使用英文关键字加粗字体，字体大小默认 -->
+     <p id="box1">成都锦城学院（中文：隶书，英文：Tahoma）字体大小（font-size:16px）</p>
+
+     <p id="box2">成都锦城学院（中文：默认字体，英文：Tahoma）字体大小（没有设置字体大小）</p>
+     <p id="box3">成都锦城学院（中、英文：默认字体）字体大小（font-size:80%）</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W3Cschool(w3cschool.cn)</title>
+</head>
+<body>
+  <select id="test_select">
+    <option value="1">显示</option>
+    <option value="2">隐藏</option>
+  </select>
+  <div id="test">我是一个div么呀我是一个div</div>
+  <script>
+    window.onload = function () {
+      var obj_select = document.getElementById("test_select");
+      var obj_div = document.getElementById("test");
+      obj_select.onchange = function () {
+        obj_div.style.display = this.value == 1 ? "block" : "none";
+      }
+    }
+  </script>
+</body>
+</html>

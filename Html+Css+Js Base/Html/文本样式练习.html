@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文本</title>
+<style>
+	p{ /*使用元素选择器设置p元素的公共样式，首行缩进*/
+	
+	}
+#box1{
+	
+}
+#box2 {
+	  /*设置文本居左对齐*/
+	  text-align: left;
+}
+#box3 { 
+	 /*设置文本居中对齐*/
+	 text-align: center;
+}
+#box4 {
+	 /*设置文本右对齐*/
+	 text-align: right;
+}
+a:link{
+	/*去除所有划线效果*/
+	text-decoration: none;
+}
+a:hover{
+	color:#F3C;
+	/*设置下划线*/
+	text-decoration: underline;
+}
+
+
+#box5 {
+	color: #00F;
+	 /*使用px为单位设置行高*/
+	 line-height: 50px;
+}
+#box6 {
+	 /*使用百分数设置行高*/
+	 line-height: 1.5em;
+}999999999999999999999999999999
+#box7 {
+	color: #90F;
+	 /*使用不带任何单位的数字设置行高*/
+	 line-height: none;
+}
+	div {
+		 /*使用正值设置字间距*/
+		 word-spacing: 20px;
+	}
+	.pos {
+		  /*使用正数设置字符间距*/
+		  letter-spacing: 10px;
+	}
+	.neg {
+		/*使用负数设置字符间距*/
+		letter-spacing: -1em;
+	}
+</style>
+</head>
+<body>
+    <p id="box1">文本默认水平左对齐</p>
+    <p id="box2">设置文本水平左对齐</p>
+    <p id="box3">设置文本水平居中对齐</p>
+    <p id="box4">设置文本水平右对齐</p>
+	<p><a href="#">观看中俄青少年冰球友谊赛</a></p>
+  <p id="box5">成功根本没有秘决，如果有的话，就只有两个词：谦虚、坚持。
+  </p>
+  <p id="box6">成功根本没有秘决，如果有的话，就只有两个词：谦虚、坚持。
+</p>
+  <p id="box7">成功根本没有秘决，如果有的话，就只有两个词：谦虚、坚持。
+  </p>
+    <div>字间距设置</div>
+   <div>字 间 距 设 置</div>
+   <div>word spacing设置</div>
+   <div>word spacing设置</div>
+   <div class="pos">字符间距</div>
+   <div class="pos">letter spacing</div>
+   <div class="neg">字符间距</div>
+</body>
+</html>

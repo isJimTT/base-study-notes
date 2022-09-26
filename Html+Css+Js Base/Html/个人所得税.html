@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>个人所得税</title>
+</head>
+
+<body>
+<input type="text" placeholder="请输入您的工资" id="gz" />
+<input type="button" value="确定" onclick="grade()" />
+<h1>税后收入是： <span id="sh"></span>元</h1>
+<script type="text/javascript">
+function grade() {
+var x = document.getElementById("gz").value;
+var r = document.getElementById("sh");
+var z = x - 3500;
+if(x<= 1500) r.innerHTML="您需要上的税0"
+else if (z<=1500){
+r.innerHTML=x-z*0.03;
+}else if (z<=4500){
+r.innerHTML=x-(z*0.10-105);
+}else if (z<=9000){
+r.innerHTML=x-(z*0.20-555);
+}else if (z<=35000){
+r.innerHTML=x-(z*0.25-1005);
+}else if (z<=55000){
+r.innerHTML=x-(z*0.30-2755);
+}else if (z<=80000){
+r.innerHTML=x-(z*0.35-5505);
+}else r.innerHTML=x-(z*0.45-13505);
+}
+</script>
+</body>
+</html >

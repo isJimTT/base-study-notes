@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>超链接样式</title>
+		<style type="text/css">
+		a:link{color:red}/* 定义a元素未访问时的样式 *//* 一般直接定义a元素就可以了，不用a:link */
+		a:visited{color: blue;}/* 定义a元素访问后的样式 */
+		a:hover{color:yellow;cursor: text;}/* 定义鼠标经过a元素时的样式 */
+		a:active{color: black;}/* 定义鼠标点击激活时的样式 */
+		a{text-decoration: none;}
+		h3{cursor: pointer;}
+		div:hover{background-color:blue;}/* hover可以用于任何元素 */
+		table:hover{background-color:red;color: white;}
+		/* 用来表示鼠标停留时该元素的样式 */
+		/* 自定义鼠标样式语法：cursor:url(),属性值（一般为default pointer text） */
+		div{width: 400px;height: 400px;}
+		table,th,tr,td{width: 400px;height: 100px; border: 1px solid black;border-collapse: collapse;}
+		td{text-align: center;}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">超链接的样式可以更改</a>
+		<a href="http://www.bilibili.com"></a>
+		<div>
+		     <table>
+				 <caption>软件工程第一学年教学计划</caption>
+				 <tr>
+					 <th>开课学期</th><th>课程</th><th>学分</th>
+				 </tr>
+				 <tr>
+					 <td rowspan="2">第一学期</td><td>高等数学</td><td>4.0</td>
+				 </tr>
+				 <tr>
+					 <td>计算机导论</td><td>3.0</td>
+				 </tr>
+			 </table>
+			 <hr />
+			 <hr />
+		</div>
+		<h3>可以更改鼠标停留在该元素上时的样式</h3>
+		<hr />
+		<hr />
+		<h4>可以自定义更改鼠标样式</h4>
+	</body>
+</html>

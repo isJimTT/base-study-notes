@@ -1,0 +1,5 @@
+
+img{width: 100px; height: 100px;border:2px solid red;}/* 定义图片大小和图片边框 */
+#PP{width:300px;height: 300px;border: 1px dashed black;text-align: center;}
+#OO{width:300px;height: 300px;border: 1px dashed black;}
+#P1{float: left;}

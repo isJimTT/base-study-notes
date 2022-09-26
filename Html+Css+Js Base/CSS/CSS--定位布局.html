@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位布局</title>
+		<style type="text/css">
+		#P1{
+			width: 170px;height: 3000px;border: 1px solid red;
+			line-height: 600px;background-color: #008000;
+			}
+		#son1{
+			position: fixed;bottom:50px;left: 50%;width: 60px; 
+			height: 60px;border: 1px solid blue; background-color: #FFFF00;
+		}/* 固定定位常用于回到页面顶部 */
+		#P3{
+			width: 100px;height: 100px;border: 1px solid red;background-color: #00FFFF;
+		}
+		#P4{
+			width: 100px;height: 100px;border: 1px solid red;background-color: blueviolet;
+			position: relative;bottom: 25px;left: 25px;
+		}/* 相对于原来本该在的位置进行偏移 */
+		#P5{
+			width: 100px;height: 100px;border: 1px solid red;background-color: brown;
+			position: absolute;right:20px; top: 20px;
+		}
+		#P6{
+			width: 150px;height: 100px;border: 1px solid red;background-color: red;
+		}
+		</style>
+	</head>
+	<body>
+		<p id="P2">顶部</p>
+		<div id="P1">
+			无定位的DIV元素
+		</div>
+		<a href="#P2" id="son1">回到顶部</a>
+		<div id="P3">
+			没有加入相对定位的元素
+		</div>
+		<div id="P4">
+			加入了相对定位的元素
+		</div>
+		<div id="P5">
+			加入了绝对定位的元素
+		</div>
+		<div id="P6">
+			默认情况下没有对元素指定position属性时就时静态定位 position:static
+		</div>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>背景</title>
+<style>
+p{ /*使用元素选择器设置公共样式*/
+	height: 50px;
+}
+body { /*设置网页的背景颜色*/
+	background-image: url(img/bg.jpg);
+}
+#box1 { /*使用十六进制数设置背景颜色*/
+	background-color: red;
+}
+#box2 { /*使用rgb值设置背景颜色*/
+ background-color: green;
+}
+#box3 { /*使用颜色英文单词*/
+ background-color: blue;
+}
+
+div { 
+	  /*div宽度*/
+	  /*div高度*/
+	/*使用01.jpg（宽:452px，高:374px）设置div的背景图片*/
+ 
+}
+.class1{
+	width: 400px; 
+	height: 200px;
+	border: 1px solid red;
+	/*背景图片的宽和高都是100px*/
+	
+}
+#box4{
+	background-image: url(img/apple.jpg);
+}
+#box5{
+	background-image: url(img/apple.jpg);
+	background-repeat: no-repeat;	
+}
+#box6{
+	background-image: url(img/apple.jpg);
+	background-position: center;
+}
+#box7 { /*背景图片从右下角开始显示*/
+	
+}
+#box8 { /*背景图片水平垂直居中*/
+	
+}
+#box9 { /*背景图片水平方向向右偏移30px，垂直方向向下偏移20px*/
+
+}
+#box10 { /*背景图片水平方向向右偏移30%，垂直方向向下偏移36%*/
+	
+}
+body {
+	line-height: 1.5em;
+ /*设置背景图片bg*/
+	 /*设置背景图片固定*/
+}
+</style>
+</head>
+<body>
+     <p id="box1">背景颜色</p>
+	<p id="box2">背景颜色</p>
+	<p id="box3">背景颜色</p>
+	 <div >设置DIV背景图片。</div>
+	 <p class="class1" id="box4">没有设置背景图片重复显示(默认效果)</p>
+	 <p class="class1" id="box5">背景图片只在水平方向重复</p>
+	 <p class="class1" id="box6">背景图片不重复显示</p>
+	 <p class="class1" id="box7">背景图片平铺开始位置</p>
+	 <p class="class1" id="box8">背景图片平铺开始位置</p>
+	 <p class="class1" id="box9">背景图片平铺开始位置</p>
+	 <p class="class1" id="box10">背景图片平铺开始位置</p>
+</body>
+</html>

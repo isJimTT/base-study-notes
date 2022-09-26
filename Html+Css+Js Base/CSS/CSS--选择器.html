@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>五种基本类型的选择器</title>
+		<style type="text/css">
+		div{color: black;}
+		</style>
+		
+		<style type="text/css">
+		#JIM{color: #00FFFF;}
+		</style>
+		
+		<style type="text/css">
+		.JIAN{color: brown;}
+		</style>
+		
+		<style type="text/css">
+		#Father div{color: greenyellow;}
+		</style>
+		
+		<!-- <style type="text/css">
+		#TT,span,.JJ,#mother div{color: ;}
+		</style> -->
+	</head>
+	<body>
+		<div>
+			这个是元素选择器
+		</div>
+		<hr>
+		<div id="JIM">
+			这个是ID选择器
+		</div>
+		<span id="Aurora">
+			这个是ID选择器
+		</span>
+		<hr />
+		<div class="JIAN">
+			这个是Class选择器
+		</div>
+		<span class="JIAN">
+			这个是Class选择器
+		</span>
+		<hr />
+		<div id="Father">
+			<div>这个是后代选择器</div>
+			<span>这个也是后代选择器</span>
+			<div>
+				<div>
+					这个还是后代选择器
+				</div>
+			</div>
+		</div>
+		<hr />
+		<!-- 
+		<div id="TT">群组选择器</div>
+		<span>也是群组选择器</span>
+		<p class="JJ">还是群组选择器</p>
+		<div id="mother">
+			<div>又是群组选择器</div> 
+		</div>
+		-->
+		<hr />
+		<h3 style="color: red;">敲重点！元素选择器直接用元素名称.
+		ID选择器用‘#’.
+		Class选择器用‘.’
+		后代选择器用空格隔开，可以改变子代以及孙代等的样式
+		群选选择器效率超级高</h3>
+	</body>
+</html>

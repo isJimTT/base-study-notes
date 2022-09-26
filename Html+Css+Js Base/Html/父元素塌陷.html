@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>父元素高度自适应示例</title>
+<style>
+.father{
+	width:300px;
+	padding:5px;
+	background:#9CF;
+	border:1px solid red;	
+	/* 方法一： */
+/* 	height: 300px; */
+}
+.father:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+.son1,.son2,.son3{
+	padding:20px;
+	margin:10px;
+	background:#FFFFCC;
+     border:1px dashed black;
+}
+.son1,.son2{
+	float: left;
+}
+.son3{
+	float: left;
+}
+</style>
+</head>
+<body>
+  <div class="father">
+     <div class="son1">div1</div>
+     <div class="son2">div2</div>
+     <div class="son3">div3</div>
+</div>
+</body>
+</html>
