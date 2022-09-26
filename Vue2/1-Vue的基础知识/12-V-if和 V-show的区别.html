@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- 当条件为false时，包含指令V-if的元素根本不会存在在DOM中，即不会渲染 -->
+			<h2 id="aaaaa" v-if="isShow">{{meessage}}</h2>
+			<!-- 当条件为false时，v-show只是给我们的元素添加一个行内样式：display:none 即渲染了，不显示 -->
+			<h2 id="bbbbb" v-show="isShow">{{meessage}}</h2>
+		</div>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data:{
+					meessage:"你好,李焕英！",
+					isShow:true,
+				},
+			})
+		</script>
+		
+	</body>
+</html>

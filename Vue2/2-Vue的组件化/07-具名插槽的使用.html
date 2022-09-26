@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- 组件内的span标签用下面slot标签相同的name也可以替换掉 -->
+			<cpn><span slot= "left">标题</span>	</cpn>
+			
+			<cpn>标题</cpn>
+		</div>
+		
+		<template id="cpn">
+			<div>
+				<slot name="left"><button>左边</button></slot>
+				<!-- Slot标签没有name属性，就会被引用的组件替换， -->
+				<slot>中间</slot>
+				<slot name="right">右边</slot>
+			</div>
+		</template>
+		<script src="js/v2.6.10/vue.js"></script>	
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data:{
+					
+				},
+				components: {
+					cpn: {
+						template: `#cpn`
+					}
+				}
+			})
+		</script>
+		
+		
+	</body>
+</html>

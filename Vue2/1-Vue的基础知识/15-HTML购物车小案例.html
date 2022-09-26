@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>购物车小案例</title>
+		<link rel="stylesheet" href="15-HTML购物车小案例.css" />
+		
+	</head>
+	<body>
+		<div id="app">
+			<div v-if="books.length">
+				<table>
+					<thead>
+						<tr>
+							<td></td>
+							<td>书籍名称</td>
+							<td>出版日期</td>
+							<td>价格</td>
+							<td>购买数量</td>
+							<td>操作</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="(item, index) in books">
+							<td>{{item.id}}</td>
+							<td>{{item.name}}</td>
+							<td>{{item.date}}</td>
+							<td>{{item.price | showPrice}}</td>
+							<td><button @click="sub(index)" :disabled="item.count <= 1">-</button>
+							{{item.count}} 
+							<button @click="add(index)">+</button></td>
+							<td><button @click="removeHandle(index)">移除</button></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>总价：{{totalPrice | showPrice}}</h2>
+			</div>
+			<h2 v-else>购物车为空</h2>
+		</div>
+		<script src="./js/v2.6.10/vue.js"></script>
+		<script src="./15-JS购物车小案例.js"></script>
+		
+	</body>
+</html>

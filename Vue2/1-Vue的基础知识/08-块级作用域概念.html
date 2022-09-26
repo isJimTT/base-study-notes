@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<button>按钮1</button>
+			<button>按钮2</button>
+			<button>按钮3</button>
+			<button>按钮4</button>
+			<button>按钮5</button>
+			<hr >
+		</div>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+		Es6中的Let作用域，使得每次的i值不会受下面i的改变而影响
+		// 	const obtns = document.getElementsByTagName('button');
+		// 	for(let i=0;i<=obtns.length-1;i++) {
+		// 		obtns[i].addEventListener('click', function() {
+		// 			console.log('第' + (i+1) + '个按钮被点击了！')
+		// 		})
+		// 	}
+		// 	i=5;
+			Es5中用闭包也可解决该问题
+			var oobtns = document.getElementsByTagName('button');
+			for(var j=0;j<=oobtns.length;j++) {
+				(function (j) {
+					oobtns[j].addEventListener('click', function() {
+						console.log('第' + (j+1) + '个按钮被点击了！')
+					}) 
+				}) (j)
+			}
+			j=5;
+		</script>
+	</body>
+</html>

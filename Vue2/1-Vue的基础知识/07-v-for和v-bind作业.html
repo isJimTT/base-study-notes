@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ss</title>
+		<style type="text/css">
+			.active{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="(item, indext) in movies" :class="{active: oindext == indext}" 
+				@click="liClick(indext)" >{{item}}</li>
+			</ul>
+		</div>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data:{
+					movies: ['海王','超凡蜘蛛侠','复仇者联盟','怦然心动','英雄联盟'],
+					oindext: 0
+				},
+				methods: {
+					liClick (indext){
+						this.oindext = indext
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 当我们写的方法省略了小括号，而方法本身是需要传入参数时，这个时候，
+			Vue会将默认在浏览器中产生的Event事件对象作为参数传入到方法中 -->
+			<button @click="obtn">按钮1</button>
+			
+			<!-- 我们需要浏览器的对象事件，有需要传入其他参数时，
+			想要手动的获得浏览器中的事件对象，需要使用  $event -->
+			<button @click="obtn2(123,$event)">按钮2</button>
+		</div>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data:{
+					
+				},
+				methods: {
+					obtn (abc){
+						console.log('------',abc)
+					},
+					
+					obtn2 (abc,event){
+						console.log('-----',abc,event)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

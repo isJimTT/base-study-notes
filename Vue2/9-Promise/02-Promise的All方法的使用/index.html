@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise的all方法</title>
+</head>
+<body>
+  <script>
+
+    Promise.all([
+      new Promise((resolve,reject) => {
+        setTimeout(() => {
+          resolve({
+            name: 'why',
+            age: 19
+          })
+        }, 1000);
+      }),
+      new Promise((resolve,reject) => {
+        setTimeout(() => {
+          resolve({
+            name: 'Jim',
+            age: 29
+          })
+        }, 2000);
+      })
+    ]).then(res => {
+        console.log(res)
+      })
+
+  </script>
+</body>
+</html>

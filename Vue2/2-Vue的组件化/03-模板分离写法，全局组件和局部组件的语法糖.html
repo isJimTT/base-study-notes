@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>tata</title>
+	</head>
+	<body>
+		<div id="app">
+			<cpn1></cpn1>
+			<cpn2></cpn2>
+			
+		</div>
+		<!-- 分离模板，用template标签，再绑定ID -->
+		<template id="cpn1">
+			<div>
+				<h2>我是组件1</h2>
+				<h2>我是组件1</h2>
+				<h2>{{title}}</h2>
+			</div>
+		</template>
+		<script src="./js/v2.6.10/vue.js"></script>
+		<script>
+		
+			// 全局组件语法糖
+			Vue.component('cpn1', {
+				template: '#cpn1',
+				// <!-- 1.组件中，date必须为函数,因为组件是可以重复使用的，而为了使每一次调用组件使，不会相互影响，
+				// 因此date中的数据必须为函数 -->
+				data (){
+					return {
+						title: '我是标题'
+					}
+			}
+			})
+		
+			const app = new Vue({
+				el: '#app',
+				components: {
+					cpn2: {
+						template: `
+							<div>
+								<h2>我是组件2</h2>
+								<h2>我是组件2</h2>
+							</div>
+							`
+							// 局部组件语法糖
+		}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
