@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 父给子传数据时，使用props属性， -->
+		<!-- 1.这是父组件模板 -->
+		<div id="app">
+			<!-- <cpn :cMessage= "message" :cFurits= "furits"></cpn> -->
+			<!-- 上面的写法是错误的，不可以使用驼峰标识，应该改成小短横 -->
+			<!-- 只有调用组件时才将驼峰改成小短横，其他地方可以正常使用驼峰标识 -->
+			<cpn :c-message= "message" :c-furits= "furits"></cpn>
+		</div>
+		<!-- 2.这是子组件模板 -->
+		<template id="cpn">
+			<div>
+					<h2>{{title}}</h2>
+				
+					<h2>{{cMessage}}</h2>
+					
+					<ul>
+						<li v-for="item in cFurits">{{item}}</li>
+					</ul>
+			</div>
+		</template>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+		// 子组件
+			const cpn = {
+				template: `#cpn`,
+				// 1.通过数组
+				// props: ['cmessage']
+				// 2.限定类型
+				// props: {
+				// 	cmessage: String
+				// }
+				// 3.提供一些默认值,以及必传值
+				props: {
+					cMessage: {
+							type: String,
+							// 组件里只要是设计到对象都要用函数返回，原理和data一样
+							default() {
+								return {
+									'我是默认值'
+								}
+							},
+							required: true
+					},
+					cFurits: {
+						type: Array,
+						default() {
+							return {
+								'我是默认值'
+							}
+						},
+						required: true
+					}
+				},
+				// <!-- 1.组件中，date必须为函数,因为组件是可以重复使用的，而为了使每一次调用组件使，不会相互影响，
+				// 因此date中的数据必须为函数 -->
+				data() {
+					return {
+						title: '我是标题'
+					}
+				},
+				
+				methods: {
+					
+				}
+			}
+			
+			// 父组件
+			const app = new Vue({
+				el: '#app',
+				data: {
+					message: '你好，李焕英！',
+					furits: ['苹果','香蕉','西瓜','葡萄']
+				},
+				components: {
+					cpn
+				}
+			})
+		</script>
+	</body>
+</html>

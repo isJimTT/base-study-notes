@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<h2>{{fullname}}</h2>
+			<h2>{{totalprice}}</h2>
+		</div>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data:{
+					firstname: '唐',
+					lastname: '简',
+					books: [
+						{id:100, name: '电脑', price: 100},
+						{id:101, name: '手机', price: 150},
+						{id:102, name: 'MP3', price: 200},
+					]
+				},
+				computed:{
+					fullname: function(){
+						return this.firstname + ' ' + this.lastname
+					},
+					totalprice: function(){
+						let sum=0
+						for(let i=0; i<this.books.length; i++){
+							sum += this.books[i].price
+						}
+						return sum
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

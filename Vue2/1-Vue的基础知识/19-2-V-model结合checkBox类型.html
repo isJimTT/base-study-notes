@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- 单选框
+			<label for="agree">
+				<input type="checkbox" id="agree" v-model="agree" value="true"/>同意协议
+			</label>
+			<h2>您的选择是: {{agree}}</h2>
+			<button :disabled="!agree">下一步</button> -->
+			
+			<!-- 复选框 -->
+			<label for="fruit">
+				<input type="checkbox" id="fruit" value="香蕉" v-model="fruit" />香蕉
+				<input type="checkbox" id="fruit" value="苹果" v-model="fruit" />苹果
+				<input type="checkbox" id="fruit" value="榴莲" v-model="fruit" />榴莲
+				<input type="checkbox" id="fruit" value="葡萄" v-model="fruit" />葡萄
+			</label>
+			<h2>您选择的水果有：{{fruit}}</h2>
+		</div>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data:{
+					 agree: false,//单选框
+					fruit: []//复选框
+				},
+			})
+		</script>
+		
+	</body>
+</html>

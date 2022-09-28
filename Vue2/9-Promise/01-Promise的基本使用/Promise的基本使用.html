@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Promise</title>
+</head>
+<body>
+  <script>
+// 1.
+    // 什么时候用Promise？
+    // 一般在有异步操作时，使用Promise对这个异步操作进行封装。
+    // 在执行传入的回调函数时，会传入两个参数，resolve，reject，而他们本身又是函数
+    new Promise((resolve,reject) => {
+      setTimeout(() => {
+        // // 成功的时候调用resolve
+        // resolve('Hello World')
+
+        // 失败的时候调用reject
+        reject('error message')
+      },1000)
+    }).then((data) => {
+      console.log(data);
+      console.log(data);
+      console.log(data);
+    }).catch((data) => {
+      console.log(data)
+    })
+ // 2.
+    // Promise可以解决回调地狱，形成链式编程。
+    // new Promise((resolve,reject) => {
+    //   setTimeout(() => {
+    //     resolve()
+    //   }, 1000);
+    // }).then(() => {
+    //     console.log('Hello Promise')
+    //     console.log('Hello Promise')
+    //     console.log('Hello Promise')
+
+    //     return new Promise((resolve,reject) => {
+    //       setTimeout(() => {
+    //     resolve()
+    //   }, 1000);
+    // }).then(() => {
+    //     console.log('Hello Vue.js')
+    //     console.log('Hello Vue.js')
+    //     console.log('Hello Vue.js')
+
+    //     return new Promise((resolve,reject) => {
+    //       setTimeout(() => {
+    //     resolve()
+    //   }, 1000);
+    // }).then(() => {
+    //     console.log('Hello World')
+    //     console.log('Hello World')
+    //     console.log('Hello World')
+    //     })
+    //     })
+    // })
+// 3.
+    // Promise的另外写法，可以在.then里直接写两个函数，第一个默认为成功后调用，第二个默认为失败后调用
+      // new Promise((resolve,reject) => {
+      //   setTimeout(() => {
+      //     // resolve('Hello Promise')
+      //     reject('Hello Error')
+      //   },1000)
+      // }).then(data => {
+      //   console.log(data)
+      // }, err => {
+      //   console.log(err)
+      // })
+  </script>
+</body>
+</html>

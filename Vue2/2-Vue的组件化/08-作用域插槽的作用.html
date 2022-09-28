@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- 这里想要在父模板中获取子模板中的数据 并且自定义其呈现方式 -->
+			<cpn>
+				<template v-slot="slot">
+					<!-- <span v-for="item in slot.data">{{item}}--</span> -->
+					<!-- 去掉尾部的 “ -- ” -->
+					<span>{{slot.data.join(' - ')}}</span>
+				</template>
+			</cpn>
+		</div>
+		
+		<template id="mycpn">
+			<div>
+				<slot :data="furits">
+					<ul>
+						<li v-for="items in furits">{{items}}</li>
+					</ul>
+				</slot>
+			</div>
+		</template>
+		<script src="js/v2.6.10/vue.js"></script>
+		<script>
+			const app = new Vue({
+				el: '#app',
+				data: {
+					
+				},
+				components: {
+					cpn: {
+						template: `#mycpn`,
+						data() {
+							return {
+								furits: ['Apple','Balala','Watermelon','Pear']
+							}
+						}
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
