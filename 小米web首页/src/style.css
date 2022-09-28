@@ -1,0 +1,237 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #ffffff;
+}
+.AllWidth {
+  width: 1226px;
+}
+
+/* Header */
+
+#BeforeHeader {
+  background-color: #333333;
+  height: 40px;
+  width: 100%;
+}
+#Header {
+  height: 40px;
+  margin: 0px auto;
+}
+#HeaderLeft {
+  float: left;
+}
+#HeaderLeft a {
+  padding-right: 7px;
+  margin-right: 3px;
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 40px;
+  border-right: 1px solid #3a3e3e;
+}
+#HeaderLeft a:last-child{
+  border-right: none;
+}
+#HeaderRight {
+  position: relative;
+  float: right;
+}
+#HeaderRight a {
+  float: left;
+  padding-right: 7px;
+  margin-right: 3px;
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 40px;
+  border-right: 1px solid #3a3e3e;
+}
+#HeaderRight div {
+  float: left;
+}
+#Shopcar {
+  color: #b0b0b0;
+  font-size: 14px;
+}
+#Shopcar img {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+}
+#Shopcar span {
+  padding: 10px 10px;
+  line-height: 40px;
+  background-color: #424242;
+}
+#HeaderRight a:nth-child(3) {
+  border-right: none;
+}
+#HeaderLeft a:hover,#HeaderRight a:hover {
+  color: #ffffff;
+}
+#Shopcar span:hover {
+  color:#ff6700;
+  background-color: #ffffff;
+}
+#menu{
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  width: 317px;
+  height: 100px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px 0.7px;
+  text-align: center;
+  line-height: 100px;
+}
+/* 重点！！！！！！！！！！！！！！ */
+/* 重点！！！！！！！！！！！！！！ */
+#Shopcar:hover #menu{
+  display: block;
+}
+/* 重点！！！！！！！！！！！！！！ */
+/* 重点！！！！！！！！！！！！！！ */
+
+/* Banner */
+#Banner {
+  width: 1226px;
+  height: 100px;
+  background-color: #f6f6f6;
+  margin: 0 auto;
+  line-height: 100px;
+}
+#BannerLeft {
+  float: left
+}
+#BannerLeft img {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+}
+#BannerMiddle {
+  float: left;
+  margin-left: 176px;
+  font-size: 15px;
+}
+#BannerMiddle a {
+  padding-right: 18px;
+  text-decoration: none;
+  color: #333333;
+}
+#BannerMiddle a:hover {
+  color: #ff6a00;
+}
+#BannerRight {
+  float: right;
+}
+#BannerRight img {
+  vertical-align: middle;
+}
+
+/* Box1 */
+
+#Box1 {
+  margin: 0px auto;
+  width: 1226px;
+  height: 460px;
+  background-image: url(../img/banner.webp);
+  background-repeat: no-repeat;
+}
+#Box1 ul {
+  padding-top:30px;
+  width: 234px;
+  height: 430px;
+  background-color: rgb(1, 1, 1,0.3);
+  float: left;
+}
+#Box1 li {
+  display: block;
+  width: 204px;
+  height: 40px;
+  list-style: none;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 40px;
+  padding-left: 30px;
+  float: left;
+}
+#Box1 li span {
+  padding-right: 30px;
+  float: right;
+}
+#Box1 li:hover {
+  background-color: #ff6700;
+}
+#Box1 .BoxMenu {
+  display: none;
+  float: right;
+  width: 990px;
+  height: 430px;
+  background-color: #ffffff;
+  color: #a5bcb6;
+  font-weight: 1000;
+  font-size: 100px;
+  text-shadow: 5px 5px 5px #333333;
+  line-height: 460px;
+  text-align: center;
+  border-top: 30px solid#ff6a00;
+}
+#Box1:hover .BoxMenu {
+  display: block;
+}
+
+/* Box2 */
+
+#Box2 {
+  margin: 15px auto;
+  width: 1226px;
+  height: 170px;
+}
+#Box2 li {
+  float: left;
+  list-style: none;
+  padding-right: 14px;
+}
+#Box2 li:last-child {
+  padding-right: 0px;
+}
+
+/* Footer */
+
+#Footer {
+  margin: 0px auto;
+  width: 1226px;
+  height: 115px;
+}
+
+/* SideBar */
+
+html {
+  font-family: iconfont;
+}
+#SideBar li {
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  width: 87px;
+  height: 87px;
+  list-style: none;
+  color: #999999;
+}
+#SideBar ul {
+  position: fixed;
+  top:440px;
+  left:1820px;
+  box-shadow: 1px 2px 7px 0.6px #999999;
+}
+#SideBar img {
+  width: 30px;
+  height: 30px;
+}
+#SideBar li:hover {
+  color: #ff6700;
+}
